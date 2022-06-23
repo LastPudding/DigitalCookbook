@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cookbook.javafx.CreateViewController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="1000.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../cookbook/icon/GreenBackground.jpg" />
+         </image>
+      </ImageView>
+      <Label alignment="CENTER" layoutX="389.0" layoutY="28.0" prefHeight="33.0" prefWidth="223.0" text="Add a new recipe" textFill="#3174e8" AnchorPane.topAnchor="28.0">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="backButton" layoutX="49.0" layoutY="29.0" mnemonicParsing="false" onAction="#backButtonEvent" text="Back" />
+      <Label layoutX="84.0" layoutY="103.0" text="Recipe Name:" />
+      <Label layoutX="84.0" layoutY="147.0" text="Cook Time:" />
+      <Label layoutX="82.0" layoutY="192.0" text="Serve People:" />
+      <Label layoutX="514.0" layoutY="103.0" text="Ingredient Name:" />
+      <TextField fx:id="recipeNameText" layoutX="198.0" layoutY="98.0" prefHeight="30.0" prefWidth="236.0" />
+      <Label layoutX="180.0" layoutY="93.0" text="*" textFill="RED" />
+      <TextField fx:id="cookTimeText" layoutX="184.0" layoutY="142.0" prefHeight="30.0" prefWidth="69.0" promptText="e.g. 10" />
+      <TextField fx:id="servePeopleText" layoutX="198.0" layoutY="187.0" prefHeight="30.0" prefWidth="97.0" promptText="e.g. 1" />
+      <TextField fx:id="inNameText" layoutX="658.0" layoutY="98.0" prefHeight="30.0" prefWidth="172.0" promptText="e.g. Pork" />
+      <Label layoutX="514.0" layoutY="147.0" text="Category:" />
+      <Button fx:id="addIngredientButton" layoutX="788.0" layoutY="229.0" mnemonicParsing="false" onAction="#addEvent" text="+" />
+      <Button fx:id="deleteIngredientButton" layoutX="834.0" layoutY="229.0" mnemonicParsing="false" onAction="#minusEvent" text="-" />
+      <Label layoutX="552.0" layoutY="548.0" text="You must fill all the blanks with *" textFill="RED" />
+      <Label layoutX="518.0" layoutY="192.0" text="Amount:" />
+      <Label layoutX="723.0" layoutY="192.0" text="Unity:" />
+      <TextField fx:id="inAmountText" layoutX="595.0" layoutY="187.0" prefHeight="30.0" prefWidth="90.0" promptText="e.g. 100" />
+      <TextField fx:id="inUnityText" layoutX="778.0" layoutY="187.0" prefHeight="30.0" prefWidth="69.0" promptText="e.g. kg" />
+      <ListView fx:id="ingredientsList" layoutX="533.0" layoutY="276.0" prefHeight="256.0" prefWidth="340.0" />
+      <Label layoutX="82.0" layoutY="371.0" text="Steps:" />
+      <Label layoutX="656.0" layoutY="234.0" text="Ingredients List" />
+      <Label layoutX="637.0" layoutY="93.0" text="*" textFill="RED" />
+      <Button fx:id="confirmButton" layoutX="461.0" layoutY="543.0" mnemonicParsing="false" onAction="#confirmEvent" text="Confirm" />
+      <Label layoutX="261.0" layoutY="147.0" text="min" />
+      <TextArea fx:id="stepsText" layoutX="134.0" layoutY="276.0" prefHeight="256.0" prefWidth="340.0" />
+      <ComboBox fx:id="categoryBox" layoutX="595.0" layoutY="142.0" prefWidth="150.0" />
+      <Label layoutX="177.0" layoutY="182.0" text="*" textFill="RED" />
+      <TextField fx:id="userIDText" layoutX="820.0" layoutY="30.0" prefHeight="30.0" prefWidth="134.0" />
+      <Label layoutX="760.0" layoutY="34.0" text="UserID: " />
+      <Button fx:id="choosePicButton" layoutX="82.0" layoutY="229.0" mnemonicParsing="false" onAction="#choosePicButton" text="Choose a picture" />
+      <Label fx:id="pictureLabel" layoutX="256.0" layoutY="234.0" prefHeight="20.0" prefWidth="208.0" />
+   </children>
+</AnchorPane>
